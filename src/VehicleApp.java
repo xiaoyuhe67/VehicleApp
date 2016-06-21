@@ -16,9 +16,13 @@ public class VehicleApp {
 		plane.accelerate();
 		plane.fly();
 		
-		Car car1=new Car("0001","red","Porsche");
+		Car car1=new Car("0001","red","Porsche","Bob");
 
-		Car car2=new Car("0002","blue","Jetta");
+		Car car2=new Car("0002","blue","Jetta","Henry");
+		
+		Boat boat1=new Boat("0001","White","Titanic","Jack");
+		
+		Plane plane1=new Plane("0001","red","Boeing","Park");
 		
 		System.out.println(car1.start());
 		System.out.println(car2.start());
@@ -36,6 +40,12 @@ public class VehicleApp {
 		System.out.println(car1.stop(""));
 		
 		System.out.println(car2.pass("the"+car1.getColor()+" "+car1.getType()));
+		
+		System.out.println(car1.operate());
+		
+		System.out.println(boat1.operate());
+		
+		System.out.println(plane1.operate());
 		
 		
 		

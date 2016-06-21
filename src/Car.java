@@ -5,18 +5,31 @@ public class Car {
 	private String Color;
 	private String Type;
 	
+	private Driver driver;
+	
 	public Car()
 	{
 		setID("0001");
 		setColor("Red");
 		setType("PorSche");
+		driver=new Driver();
+		driver.setName("Henry");
+
 	}
 	
-	public Car(String strID, String strColor, String strType)
+	public Car(String strID, String strColor, String strType,String strDriName)
 	{
 		setID(strID);
 		setColor(strColor);
 		setType(strType);
+		driver=new Driver();
+		this.driver.setName(strDriName);
+		
+	}
+	
+	public String operate()
+	{
+		return "The "+Color+" "+Type+" is driven by "+this.driver.getName();
 	}
 
 	
